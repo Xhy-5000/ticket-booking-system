@@ -24,7 +24,14 @@ public class userMapperTest {
     @Test
     public void insert(){
         user user = new user();
-        user.setUser_id(2);
+        user.setFirst_name("1");
+        user.setLast_name("user");
+        user.setDate_of_birth("1990-09-29");
+        user.setGender("Male");
+        user.setEmail("user1@gmail.com");
+        user.setBalance(0);
+        user.setMileage(0);
+        user.setMembership_level("Basic");
         user.setPassword("123456");
         userMapper.insert(user);
     }

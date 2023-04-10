@@ -7,10 +7,10 @@
         SELECT * FROM User WHERE user_id = #{user_id}
     </select>
     <insert id="insert">
-        INSERT INTO User (
-        user_id, password
-        ) VALUES (
-        #{user_id}, #{password}
-        )
+        INSERT INTO User
+        (last_name, first_name, date_of_birth, gender, email, balance, password, mileage, fk_membership_level)
+        VALUES
+        (#{last_name}, #{first_name}, #{date_of_birth}, #{gender}, #{email}, #{balance},
+        #{password}, #{mileage}, #{membership_level})
     </insert>
 </mapper>

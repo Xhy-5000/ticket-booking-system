@@ -12,10 +12,10 @@ public class user implements Serializable{
     private String date_of_birth;
     private String gender;
     private String email;
-    private double balance;
+    private double balance=0;
     private String password;
-    private int mileage;
-    private String membership_level;
+    private int mileage=0;
+    private String membership_level="Basic";
 
     public Integer getUser_id() {
         return user_id;

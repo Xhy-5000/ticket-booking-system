@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project.ticketbookingsystem.mapper.flightMapper">
+    <select id="findByid" resultType="project.ticketbookingsystem.entity.flight">
+        SELECT * FROM Flight WHERE flight_id = #{flight_id}
+    </select>
+
+    <select id="findByAirRoute" resultType="project.ticketbookingsystem.entity.flight">
+        SELECT * FROM Flight
+        WHERE fk_departure_airport = #{departure_airport}
+        AND fk_arrival_airport = #{arrival_airport}
+    </select>
+
+    <select id="findByAirRouteDate" resultType="project.ticketbookingsystem.entity.flight">
+        SELECT * FROM Flight
+        WHERE fk_departure_airport = #{departure_airport}
+        AND fk_arrival_airport = #{arrival_airport}
+        AND departure_time like concat('%',#{departure_date},'%')
+    </select>
+
+    <insert id="insert">
+        INSERT INTO Flight
+        (fk_departure_airport, fk_arrival_airport, fk_airline_name, departure_time, arrival_time, flight_duration,
+        wifi, charge, in_flight_entertainment, meal)
+        VALUES
+        (#{departure_airport}, #{arrival_airport}, #{airline_name}, #{departure_time}, #{arrival_time}, #{flight_duration},
+        #{wifi}, #{charge}, #{in_flight_entertainment}, #{meal})
+    </insert>
+</mapper>
