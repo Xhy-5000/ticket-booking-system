@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project.ticketbookingsystem.mapper.userMapper">
+    <select id="findByid" resultType="project.ticketbookingsystem.entity.user">
+        SELECT * FROM User WHERE user_id = #{user_id}
+    </select>
+    <insert id="insert">
+        INSERT INTO User (
+        user_id, password
+        ) VALUES (
+        #{user_id}, #{password}
+        )
+    </insert>
+</mapper>
