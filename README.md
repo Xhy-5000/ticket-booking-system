@@ -9,7 +9,7 @@ project link: https://github.com/Xhy-5000/ticket-booking-system
 - Open postman
 - Start a new request in a new collection and **add Content-Type=application/json in Headers**
 
-## Test details
+## Test Details
 ### airline login
 localhost:8080/airline/login?name=United Airlines&password=United Airlines
 ![airline_login](./src/main/resources/static/airline_login.png)
@@ -29,3 +29,18 @@ localhost:8080/user/searchDate?departure_airport=John F. Kennedy International A
 ### airline post new flight
 localhost:8080/airline/post?departure_airport=John F. Kennedy International Airport&arrival_airport=Pittsburgh Internetional Airport&airline_name=United Airlines&departure_time=2023-05-10 17:00:00&arrival_time=2023-05-10 19:40:00&flight_duration=2h 40m&wifi=0&charge=0&in_flight_entertainment=0&meal=0
 ![airline_post](./src/main/resources/static/airline_post.png)
+
+## Data Type
+The return value is like 
+```aidl
+{
+    "code": 0, # 0 means success, 1 means error
+    "msg": "successfully login", # message
+    "obj": { # object in this function
+        "airline_name": "United Airlines",
+        "contact_information": "1(800)864-8331",
+        "password": "United Airlines"
+    },
+    "count": 0
+}
+```
