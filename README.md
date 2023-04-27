@@ -40,6 +40,11 @@ localhost:8080/user/searchDate?departure_airport=John F. Kennedy International A
 localhost:8080/airline/post?departure_airport=John F. Kennedy International Airport&arrival_airport=Pittsburgh Internetional Airport&airline_name=United Airlines&departure_time=2023-05-10 17:00:00&arrival_time=2023-05-10 19:40:00&flight_duration=2h 40m&wifi=0&charge=0&in_flight_entertainment=0&meal=0
 ![airline_post](./src/main/resources/static/airline_post.png)
 
+### user check baggage information
+localhost:8080/user/findBaggageInfoByid?flight_id=5
+![baggage_post](./src/main/resources/static/123123.png)
+
+
 ## Data Type
 The return value is like 
 ```aidl
