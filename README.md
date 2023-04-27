@@ -28,6 +28,14 @@ localhost:8080/user/register?last_name=user&first_name=2&date_of_birth=2000-1-1&
 Then the info of this new user would be added into the database.
 ![user_register2](./src/main/resources/static/user_register2.png)
 
+### user forget password
+localhost:8080/user/forget?id=14&password=987654321
+![user_forget](./src/main/resources/static/user_forget.png)
+
+### close account
+localhost:8080/delete?id=14
+![delete_user](./src/main/resources/static/delete_user.png)
+
 ### user search by position
 localhost:8080/user/search?departure_airport=John F. Kennedy International Airport&arrival_airport=Pittsburgh Internetional Airport
 ![user_search_position](./src/main/resources/static/user_search_position.png)

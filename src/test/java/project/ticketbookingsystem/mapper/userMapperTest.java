@@ -17,7 +17,7 @@ public class userMapperTest {
 
     @Test
     public void findByid(){
-        user user =userMapper.findByid(6);
+        user user =userMapper.findByid(14);
         System.out.println(user);
     }
 
@@ -34,6 +34,16 @@ public class userMapperTest {
         user.setMembership_level("Basic");
         user.setPassword("123456");
         userMapper.insert(user);
+    }
+
+    @Test
+    public void delete(){
+        userMapper.delete(13);
+    }
+
+    @Test
+    public void update(){
+        userMapper.update(14,"000000");
     }
 
 }

@@ -13,4 +13,10 @@
         (#{last_name}, #{first_name}, #{date_of_birth}, #{gender}, #{email}, #{balance},
         #{password}, #{mileage}, #{membership_level})
     </insert>
+    <delete id="delete">
+        delete from User where user_id=#{user_id}
+    </delete>
+    <update id="update">
+        update User set password = #{new_password} where user_id=#{user_id}
+    </update>
 </mapper>
