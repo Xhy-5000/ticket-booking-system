@@ -19,7 +19,7 @@ public class airlineRegisterService {
         airlineMapper.insert(airline);
         result result = new result();
         result.setCode(0);
-        result.setMsg("post success");
+        result.setMsg("register success");
         result.setObj(airline);
         return result;
     }
