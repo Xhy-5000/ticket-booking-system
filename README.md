@@ -14,6 +14,10 @@ project link: https://github.com/Xhy-5000/ticket-booking-system
 localhost:8080/airline/login?name=United Airlines&password=United Airlines
 ![airline_login](./src/main/resources/static/airline_login.png)
 
+### airline register
+localhost:8080/airline/register?airline_name=JetBlue Airways&contact_information=1(800)538-2583&airline_password=JetBlue Airways
+![airline_register](./src/main/resources/static/airline_register.png)
+
 ### user login
 localhost:8080/login?id=6&password=p@ssw0rd
 ![user_login](./src/main/resources/static/user_login.png)

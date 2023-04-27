@@ -6,4 +6,7 @@
     <select id="findByName" resultType="project.ticketbookingsystem.entity.airline">
         SELECT * FROM Airline WHERE airline_name = #{airline_name}
     </select>
+    <insert id="insert">
+        INSERT INTO Airline (airline_name, contact_information, password) VALUES (#{airline_name}, #{contact_information}, #{password});
+    </insert>
 </mapper>

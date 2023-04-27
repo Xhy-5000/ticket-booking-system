@@ -19,4 +19,13 @@ public class airlineMapperTest {
         airline airline =airlineMapper.findByName("United Airlines");
         System.out.println(airline);
     }
+
+    @Test
+    public void insert(){
+        airline airline= new airline();
+        airline.setAirline_name("JetBlue Airways");
+        airline.setContact_information("1(800)538-2583");
+        airline.setPassword("JetBlue Airways");
+        airlineMapper.insert(airline);
+    }
 }
