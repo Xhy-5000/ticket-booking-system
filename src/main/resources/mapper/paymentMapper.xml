@@ -7,4 +7,9 @@
         INSERT INTO `wex63`.`Payment` (`amount`, `payment_date`, `payment_method`, `fk_user_id`)
         VALUES (#{amount},#{payment_date},#{payment_method},#{fk_user_id});
     </insert>
+
+    <select id="findid" resultType="int">
+        select payment_id from Payment where amount=#{amount} and payment_date=#{payment_date}
+        and payment_method=#{payment_method} and fk_user_id=#{fk_user_id};
+    </select>
 </mapper>

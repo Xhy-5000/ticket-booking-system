@@ -2,13 +2,14 @@ package project.ticketbookingsystem.entity;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.util.Objects;
 
 @Data
 public class payment {
     private int payment_id;
     private double amount;
-    private String payment_date;
+    private Date payment_date;
     private String payment_method;
     private int fk_user_id;
 
@@ -28,11 +29,11 @@ public class payment {
         this.amount = amount;
     }
 
-    public String getPayment_date() {
+    public Date getPayment_date() {
         return payment_date;
     }
 
-    public void setPayment_date(String payment_date) {
+    public void setPayment_date(Date payment_date) {
         this.payment_date = payment_date;
     }
 

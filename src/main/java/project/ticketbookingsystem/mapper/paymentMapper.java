@@ -5,4 +5,6 @@ import project.ticketbookingsystem.entity.payment;
 @Mapper
 public interface paymentMapper {
     Integer insert(payment payment);
+
+    Integer findid(payment payment);
 }
