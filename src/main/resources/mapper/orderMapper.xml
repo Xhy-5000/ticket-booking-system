@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project.ticketbookingsystem.mapper.orderMapper">
+    <select id="findByUser_id" resultType="project.ticketbookingsystem.entity.order">
+        SELECT * FROM wex63.Order WHERE fk_user_id = #{user_id}
+    </select>
+    <insert id="insert">
+        INSERT INTO wex63.Order (`passenger_name`, `price`, `status`, `fk_user_id`,
+        `fk_insurance_package`, `fk_payment_id`) VALUES (#{passenger_name}, #{price}, #{status},
+        #{fk_user_id}, #{fk_insurance_package},#{fk_payment_id});
+    </insert>
+</mapper>

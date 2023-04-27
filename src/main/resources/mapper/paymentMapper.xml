@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project.ticketbookingsystem.mapper.paymentMapper">
+    <insert id="insert">
+        INSERT INTO `wex63`.`Payment` (`amount`, `payment_date`, `payment_method`, `fk_user_id`)
+        VALUES (#{amount},#{payment_date},#{payment_method},#{fk_user_id});
+    </insert>
+</mapper>
